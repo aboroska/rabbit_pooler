@@ -1,0 +1,6 @@
+-name rabbit_pooler
+
+-setcookie rabbit_pooler_cookie
+
++K true
++A30

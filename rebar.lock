@@ -1,0 +1,4 @@
+[{<<"pooler">>,
+  {git,"https://github.com/seth/pooler.git",
+       {ref,"2888321cd799234183dfcba82f335207d68e354d"}},
+  0}].
