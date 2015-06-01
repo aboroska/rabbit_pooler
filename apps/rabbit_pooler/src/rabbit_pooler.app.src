@@ -7,6 +7,10 @@
    [kernel,
     stdlib
    ]},
-  {env,[]},
+  {included_applications, [amqp_client,rabbit_common,pooler]},
+  {env,[{poolconfig,[{max_count,5},
+                     {init_count,2}]},
+        {brokers, [{broker1, []},
+                   {broker2, [{port,5673}]}]}]},
   {modules, []}
  ]}.

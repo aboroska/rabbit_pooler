@@ -28,7 +28,11 @@ start_link() ->
 
 %% Child :: {Id,StartFunc,Restart,Shutdown,Type,Modules}
 init([]) ->
-    {ok, { {one_for_all, 0, 1}, []} }.
+    PoolerSup = {pooler_sup, {pooler_sup, start_link, []},
+                 permanent, infinity, supervisor, [pooler_sup]},
+    App = {rabbit_pooler, {rabbit_pooler, start_link, []},
+                permanent, infinity, worker, [rabbit_pooler]},
+    {ok, { {one_for_all, 0, 1}, [PoolerSup, App]} }.
 
 %%====================================================================
 %% Internal functions
