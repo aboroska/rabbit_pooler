@@ -1,7 +1,9 @@
 rabbit_pooler
-=====
+=============
 
-An OTP application
+Erlang example for a RabbitMQ connection pool.
+
+Very early stage, not tested yet!
 
 Build
 -----
