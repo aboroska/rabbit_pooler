@@ -1,6 +1,6 @@
--name rabbit_pooler
+-sname rabbit_pooler@localhost
 
--setcookie rabbit_pooler_cookie
+-setcookie aaa
 
 +K true
 +A30
